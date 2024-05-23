@@ -20,7 +20,7 @@ def read(users: list) -> None:
         print(f"Twój znajomy:  {user['name']},opublikował: {user['posts']}")
 
 
-read(data_of_users)
+# read(data_of_users)
 
 
 def add_user(users: list) -> None:
@@ -46,7 +46,22 @@ def add_user(users: list) -> None:
         read(data_of_users)
         read(users)
 
-delete_user(data_of_users)
+# delete_user(data_of_users)
+# read(data_of_users)
+
+def update(users: list) -> None:
+
+    name:str=input("Enter name of user to be modified: ")
+    for user in users:
+        if user ['name']==name:
+            new_name:str=input('Enter new name: ')
+            new_surname:str=input('Enter new surname: ')
+            new_posts:int=int(input('Enter new number of posts: '))
+            new_location:str=input('Enter new location: ')
+            user['name']=new_name
+            user['surname']=new_surname
+            user['posts']=new_posts
+            user['Location']=new_location
+
+update(data_of_users)
 read(data_of_users)
-
-
